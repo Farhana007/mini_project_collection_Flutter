@@ -1,8 +1,7 @@
-import 'package:dream_app/catchMeGame/game_1st_page.dart';
-import 'package:dream_app/catchMeGame/game_main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:get/get.dart';
+import 'game_main_page.dart';
 
 class GameFinal extends StatefulWidget {
   final int finalPoint;
@@ -31,7 +30,7 @@ class _GameFinalState extends State<GameFinal> {
                 ClipRect(
                     clipBehavior: Clip.antiAlias,
                     child: Image.asset('assets/gameimg/gameFinal.png')),
-                "You Have Fininsh In "
+                "You Have Finished In "
                     .text
                     .size(25)
                     .color(Color.fromARGB(255, 12, 8, 132))

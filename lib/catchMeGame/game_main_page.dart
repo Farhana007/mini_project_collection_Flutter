@@ -15,7 +15,7 @@ class _GameMainPageState extends State<GameMainPage> {
   List numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
   //Generate Random Number
   int randomNumber = Random().nextInt(9) + 1;
-  //ppoint count
+  //point count
   int point = 0;
 
   //colors consts
@@ -83,7 +83,7 @@ class _GameMainPageState extends State<GameMainPage> {
                                 Get.to(() => GameFinal(finalPoint: point));
                               });
                             } else {
-                              print('Failed');
+                              VxToast.show(context, msg: 'Failed');
                             }
 
                             setState(() {

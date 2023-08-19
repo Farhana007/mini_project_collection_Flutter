@@ -44,7 +44,7 @@ class GameFristPage extends StatelessWidget {
               40.heightBox,
               "Developed by Farhana"
                   .text
-                  .color(Color.fromARGB(255, 114, 108, 108))
+                  .color(Color.fromARGB(255, 46, 44, 44))
                   .make()
             ]),
       ),
