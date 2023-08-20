@@ -3,7 +3,6 @@ import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'timer_widget.dart';
 
-
 class MyAppBar extends StatelessWidget {
   const MyAppBar({Key? key}) : super(key: key);
 
@@ -12,44 +11,39 @@ class MyAppBar extends StatelessWidget {
     return DefaultTabController(
         length: 3,
         child: Scaffold(
+          //tabbar widget
           appBar: AppBar(
-             title: "T A B B A R".text.make(),
+            title: "T A B B A R".text.make(),
           ),
-        
+
           body: Column(
-             children:  [
-               TabBar(
-                   tabs:[
-                     Tab(
-                       icon: Icon(Icons.h_mobiledata),
-                     ),
-                     Tab(
-                       icon: Icon(Icons.settings),
-                     ),
-                     Tab(
-                       icon: Icon(Icons.cabin),
-                     ),
-
-                   ] ),
-
-               Expanded(child:
-               TabBarView(children: [
-                 Center(
-                   child: TimerWe()
-                 ),
-                 Center(
-                   child: Container(
-                     child: Text("Settings"),
-                   ),
-                 ),
-                 Center(
-                   child: Container(
-                     child: Text("Share"),
-                   ),
-                 ),
-               ])
-               )
-             ],
+            children: [
+              TabBar(tabs: [
+                Tab(
+                  icon: Icon(Icons.h_mobiledata),
+                ),
+                Tab(
+                  icon: Icon(Icons.settings),
+                ),
+                Tab(
+                  icon: Icon(Icons.cabin),
+                ),
+              ]),
+              Expanded(
+                  child: TabBarView(children: [
+                Center(child: TimerWe()),
+                Center(
+                  child: Container(
+                    child: Text("Settings"),
+                  ),
+                ),
+                Center(
+                  child: Container(
+                    child: Text("Share"),
+                  ),
+                ),
+              ]))
+            ],
           ),
         ));
   }
